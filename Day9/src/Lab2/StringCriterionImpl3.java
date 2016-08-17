@@ -1,6 +1,6 @@
 package Lab2;
 
-public class StringCriterionImpl3 implements StringCriterion {
+public class StringCriterionImpl3<T> implements StringCriterion<T> {
 
 	private String keyword;
 
@@ -9,7 +9,8 @@ public class StringCriterionImpl3 implements StringCriterion {
 	}
 
 	@Override
-	public boolean test(String str) {
+	public boolean test(T t) {
+		String str = (String)t;
 		// TODO Auto-generated method stub
 		if (str.contains(keyword)) {
 			return true;

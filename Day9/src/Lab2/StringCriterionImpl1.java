@@ -1,6 +1,6 @@
 package Lab2;
 
-public class StringCriterionImpl1 implements StringCriterion {
+public class StringCriterionImpl1<T> implements StringCriterion<T>{
 
 	private int len = 0;
 
@@ -9,8 +9,9 @@ public class StringCriterionImpl1 implements StringCriterion {
 	}
 
 	@Override
-	public boolean test(String str) {
+	public boolean test(T t) {
 		// TODO Auto-generated method stub
+		String str = (String)t;
 		if (str.length() > this.getLen())
 			return true;
 		else
